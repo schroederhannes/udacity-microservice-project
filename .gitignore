@@ -2,3 +2,4 @@ set_env.sh
 */node_modules/*
 .npm
 **/.DS_Store
+**/aws-secret.yaml
