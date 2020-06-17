@@ -8,11 +8,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backend-feed
+      service: backend-feed
   template:
     metadata:
       labels:
-        app: backend-feed
+        service: backend-feed
     spec:
       containers:
       - image: schroederhannes/udacity-restapi-feed

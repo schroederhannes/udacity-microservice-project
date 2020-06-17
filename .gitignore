@@ -3,3 +3,4 @@ set_env.sh
 .npm
 **/.DS_Store
 **/aws-secret.yaml
+**/env-secret.yaml

@@ -1,0 +1,35 @@
+language: node_js
+node_js:
+  - 13
+
+services:
+  - docker
+
+install:
+  - echo "nothing to be installed"
+
+before_scripts:
+  - echo "no tests"
+
+scripts:
+  - docker --version 
+  - docker build -t reverse-proxy ./deployment/docker/
+  - docker tag reverse-proxy schroederhannes/reverse-proxy:latest
+
+  - docker build -t udacity-restapi-user ./restapi-user/
+  - docker tag udacity-restapi-user schroederhannes/udacity-restapi-user:latest
+
+  - docker build -t udacity-restapi-feed ./restapi-feed/
+  - docker tag udacity-restapi-feed schroederhannes/udacity-restapi-feed:latest
+
+  - docker build -t schroederhannes/udacity-frontend ./frontend/
+  - docker tag udacity-frontend schroederhannes/udacity-frontend:latest
+
+after_success:
+  - echo "using login for $DOCKER_USERNAME"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push schroederhannes/reverse-proxy:latest
+  - docker push schroederhannes/udacity-restapi-user:latest
+  - docker push schroederhannes/udacity-restapi-feed:latest
+  - docker push schroederhannes/udacity-frontend:latest
+  - echo "Finished pushing images"

@@ -7,6 +7,6 @@ data:
   JWT_SECRET: somerandomjwtsecret123
   POSTGRESS_DB: udagram
   POSTGRESS_HOST: database-2.cr8i3ivrgkww.eu-central-1.rds.amazonaws.com
-  URL: http://localhost:8100  
+  URL: a7ba0ac7cdad54bbfa5628edfb19b1aa-847282459.eu-central-1.elb.amazonaws.com:8100
 metadata:
   name: env-config
