@@ -22,7 +22,7 @@ scripts:
   - docker build -t udacity-restapi-feed ./restapi-feed/
   - docker tag udacity-restapi-feed schroederhannes/udacity-restapi-feed:latest
 
-  - docker build -t schroederhannes/udacity-frontend ./frontend/
+  - docker build -t udacity-frontend ./frontend/
   - docker tag udacity-frontend schroederhannes/udacity-frontend:latest
 
 after_success:
