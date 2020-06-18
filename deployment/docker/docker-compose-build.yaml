@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: .
-    image: schroederhannes/reverse-proxy
+    image: schroederhannes/reverse-proxy:latest
   backend_user:
     build:
       context: ../../udacity-c3-restapi-user
-    image: schroederhannes/udacity-restapi-user
+    image: schroederhannes/udacity-restapi-user:latest
   backend_feed:
     build:
       context: ../../udacity-c3-restapi-feed
-    image: schroederhannes/udacity-restapi-feed
+    image: schroederhannes/udacity-restapi-feed:latest
   frontend:
     build:
       context: ../../udacity-c3-frontend
-    image: schroederhannes/udacity-frontend
+    image: schroederhannes/udacity-frontend:latest
