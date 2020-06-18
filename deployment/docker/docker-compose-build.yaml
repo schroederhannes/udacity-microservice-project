@@ -10,9 +10,9 @@ services:
     image: schroederhannes/udacity-restapi-user
   backend_feed:
     build:
-      context: ../../udacity-c3-restapi-feed  
+      context: ../../udacity-c3-restapi-feed
     image: schroederhannes/udacity-restapi-feed
   frontend:
     build:
-      context: ../../udacity-c3-frontend  
+      context: ../../udacity-c3-frontend
     image: schroederhannes/udacity-frontend

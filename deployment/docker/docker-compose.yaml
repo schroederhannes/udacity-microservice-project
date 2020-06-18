@@ -7,7 +7,7 @@ services:
       restart: always
       depends_on:
         - backend-user
-        - backend-feed     
+        - backend-feed
   backend-user:
     image: schroederhannes/udacity-restapi-user
     environment:
@@ -29,7 +29,7 @@ services:
       POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
       POSTGRESS_DB: $POSTGRESS_DB 
       POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
+      AWS_REGION: $AWS_REGION
       AWS_PROFILE: $AWS_PROFILE 
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
